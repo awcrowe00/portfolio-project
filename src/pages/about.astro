@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Adam Crowe" description="About Adam Crowe">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About Me"
+			>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Based in the North Bay Area, I'm currently a full-stack web developer.<br>
+						I'm always eager to learn and expierement with new technologies (hence this site)
+						despite the ineveitable catastophies (hence the bad code) but always seek to improve.
+						<br>
+
+						When I'm not at work, trying to improve this website or write a game-changing application,
+						you can find me burining something in the kitchen, reading oppionin peices on fashion or attempting a new Pr at the gym.
+						<br>
+						<br>
+
+						Send me an e-mail if you want to talk about cooking, coding or crushing weights.
+						Thanks for coming by.
+						<br>
+						<br>
+						-Adam 𓅂
+
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>University of California, Davis - B.S. Computer Science</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>PHP, CodeIgniter</p>
+				</div>
+			</section>
+		</main>
+
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		font-family: "Ranade-Regular";
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		font-family: "Ranade-BoldItalic";
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--green-accent);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

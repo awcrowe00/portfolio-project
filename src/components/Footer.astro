@@ -1,0 +1,68 @@
+---
+---
+
+<footer>
+	<div class="group">
+		<p>
+			made with <a href="https://astro.build/">astro</a>, <a href="https://svelte.dev/">svelte</a> and <a href="https://threejs.org/">three.js</a>
+		</p>
+</footer>
+<style>
+	footer {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		margin-top: auto;
+		padding: 3rem 2rem 3rem;
+		text-align: center;
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+		position: absolute;
+		top: 85vh;
+		right: 1vh;
+		justify-content: flex-end;
+
+	}
+
+	footer a {
+		color: var(--gray-400);
+		text-underline-offset: 0.25em;
+	}
+
+	footer a:hover,
+	footer a:focus {
+		text-decoration-color: currentColor;
+	}
+
+	.group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.socials {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	@media (min-width: 50em) {
+		footer {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 2.5rem;
+		}
+
+		.group {
+			flex-direction: row;
+			gap: 1rem;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		.socials {
+			justify-content: flex-end;
+		}
+	}
+</style>
