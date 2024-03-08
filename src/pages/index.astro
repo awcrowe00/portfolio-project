@@ -128,10 +128,8 @@ import CanvasContainer from '../components/CanvasContainer.astro'
 	import * as THREE from 'three';
 			import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
 			import { SDFGeometryGenerator } from '../node_modules/three/examples/jsm/geometries/SDFGeometryGenerator.js';
-			import Stats from '../node_modules/three/examples/jsm/libs/stats.module.js';
-			import { GUI } from '../node_modules/three/examples/jsm/libs/lil-gui.module.min.js';
 			
-			let renderer, stats, meshFromSDF, scene, camera, clock, controls;
+			let renderer, meshFromSDF, scene, camera, clock, controls;
 
 			const settings = {
 				res: 4,
@@ -200,29 +198,13 @@ import CanvasContainer from '../components/CanvasContainer.astro'
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				document.body.appendChild( renderer.domElement );
 
-				stats = new Stats();
-				document.body.appendChild( stats.dom );
 
 				controls = new OrbitControls( camera, renderer.domElement );
 				controls.enableDamping = true;
 				controls.enableZoom = false;
 				window.addEventListener( 'resize', onWindowResize );
 
-				//
-			
-				const panel = new GUI( );
-			
-				panel.add( settings, 'res', 1, 6, 1 ).name( 'Res' ).onFinishChange( compile );
-				panel.add( settings, 'bounds', 1, 10, 1 ).name( 'Bounds' ).onFinishChange( compile );
-				panel.add( settings, 'material', [ 'depth', 'normal' ] ).name( 'Material' ).onChange( setMaterial );
-				panel.add( settings, 'wireframe' ).name( 'Wireframe' ).onChange( setMaterial );
-				panel.add( settings, 'autoRotate' ).name( 'Auto Rotate' );
-				panel.add( settings, 'vertexCount' ).name( 'Vertex count' ).listen().disable();
-
-				//
-
 				compile();
-
 			}
 
 			function compile() {
@@ -311,6 +293,4 @@ import CanvasContainer from '../components/CanvasContainer.astro'
 				stats.update();
 
 			}
-
-
 </script>
