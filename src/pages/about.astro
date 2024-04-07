@@ -2,11 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import Hero from '../components/Hero.astro';
+
+const aboutMeBackground = "black";
 ---
 
 <BaseLayout title="About | Adam Crowe" description="About Adam Crowe">
 	<div class="stack gap-20">
-		<main class="wrapper about">
+		<main class="wrapperAbout about">
 			<Hero
 				title="About Me"
 			>
@@ -64,11 +66,17 @@ import Hero from '../components/Hero.astro';
 	</div>
 </BaseLayout>
 
-<style>
+<style define:vars={{aboutMeBackground}}>
+
+	.wrapperAbout {
+		width: 100%;
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+		background-color: var(--aboutMeBackground);
 	}
 
 	img {
@@ -82,7 +90,7 @@ import Hero from '../components/Hero.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		color: var(--gray-200);
+		color: white;
 	}
 
 	.section-title {
