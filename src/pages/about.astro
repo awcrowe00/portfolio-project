@@ -28,39 +28,7 @@ const aboutMeBackground = "black";
 					</p>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>University of California, Davis - B.S. Computer Science</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content" class="display:flex; flex-direction:row;">
-					<figure>
-						<figcaption>Professional Experience in:</figcaption>
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>JavaScript</li>
-								<li>PHP</li>
-								<li>CodeIgniter</li>
-								<li>OpenCart</li>
-								<li>WordPress</li>
-								<li>AWS</li>
-								<li>GSC</li>
-							</ul> 
-					</figure>
-					<figure>
-						<figcaption>Aspiring to be Proficient in:</figcaption>
-							<ul>
-								<li>Astro</li>
-								<li>React</li>
-								<li>Node</li>
-							</ul> 
-					</figure>
-				</div>
-			</section>
+
 		</main>
 
 	</div>
@@ -115,6 +83,10 @@ const aboutMeBackground = "black";
 		text-decoration-color: currentColor;
 	}
 
+	main{
+		height: 100vh;
+	}
+
 	@media (min-width: 50em) {
 		.about {
 			display: grid;
@@ -129,5 +101,13 @@ const aboutMeBackground = "black";
 			display: contents;
 			font-size: var(--text-lg);
 		}
+
+		.section-title{
+			margin-left: 40px;
+		}
+
+		main{
+		height: 100vh;
+	}
 	}
 </style>
