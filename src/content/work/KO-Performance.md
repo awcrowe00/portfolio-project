@@ -1,7 +1,7 @@
 ---
 title: KO PERFORMANCE
 publishDate: 2025-01-01 00:00:00
-img: /assets/KO.png
+img: /portfolio-project/assets/KO.png
 img_alt: Interior of gym
 description: |
   KO PERFORMANCE BELONGS TO PERSONAL TRAINER EXTRODINARE KEVIN O'CALLAHAN. HE WANTED A WEBSITE THAT SHOWCASES HIS CLIENTS
