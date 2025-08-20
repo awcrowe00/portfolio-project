@@ -1,36 +1,56 @@
-
-<div id="three-container" style="width: 100%; height: 500px;">
-    <div id="info" class="gradient-text">
+<div id="three-container">
+  <div id="info" class="gradient-text">
     ADAM CROWE
-    </div>
+  </div>
 </div>
 
 <script>
-  import { initThreeScene } from '../scripts/three-scene.js';
-  
-  // Initialize the scene
-  initThreeScene('three-container');
+    import { initThreeScene } from '../scripts/three-scene.js';
+    initThreeScene('three-container');
 </script>
+
 <style>
-    #info{
+    #three-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    #info {
         font-family: "Ranade-BoldItalic";
-        position: absolute; 
-        top: 40%; 
-        width: 100%; 
-        text-align: center; 
-        z-index: 100; 
-        display:block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove any default padding */
         /* If you want to implement it in very old browser-versions */
-        -webkit-user-select: none; 
-        /* Chrome/Safari */ 
-        -moz-user-select: none; 
+        -webkit-user-select: none;
+        /* Chrome/Safari */
+        -moz-user-select: none;
         /* Firefox */
-        -ms-user-select: none; 
-        /* IE10+ *//* The rule below is implemented in most browsers by now */
+        -ms-user-select: none;
+        /* IE10+ */
+        /* The rule below is implemented in most browsers by now */
         user-select: none;
         font-size: 7vw;
         background: -webkit-linear-gradient(247deg, rgba(188,229,5,1) 35%, rgba(188,229,5,0.6810925053615196) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+  
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    main {
+        height: 100vh;
+        overflow: hidden;
     }
 </style>
