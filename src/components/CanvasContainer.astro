@@ -1,9 +1,16 @@
 
-<div id="container"></div>
-<div id="info" class="gradient-text">
+<div id="three-container" style="width: 100%; height: 500px;">
+    <div id="info" class="gradient-text">
     ADAM CROWE
+    </div>
 </div>
 
+<script>
+  import { initThreeScene } from '../scripts/three-scene.js';
+  
+  // Initialize the scene
+  initThreeScene('three-container');
+</script>
 <style>
     #info{
         font-family: "Ranade-BoldItalic";
