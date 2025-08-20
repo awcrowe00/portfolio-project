@@ -6,25 +6,27 @@ import Hero from '../components/Hero.astro';
 const aboutMeBackground = "black";
 ---
 
-<BaseLayout title="About | Adam Crowe" description="About Adam Crowe">
+<BaseLayout 
+	title="About | Adam Crowe" 
+	description="About Adam Crowe"
+>
 	<div class="stack gap-20">
 		<main class="wrapperAbout about">
 			<Hero
-				title="About Me"
+				title="ABOUT ME"
 			>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Hi, welcome to my website.<br><br>
-						My name is Adam and I'm currently a full-stack web developer based in the North Bay area.<br>
-						I'm always trying to expand my skillset and deepen my understanding of the field.<br><br>
-						But every now and then I like to cook, bake and go to the gym.<br><br>
+						HI, WELCOME TO MY WEBSITE.<br><br>
+						MY NAME IS ADAM AND I'M A FULL-STACK WEB DEVELOPER BASED IN THE NORTH BAY AREA.<br>
+						I'M ALWAYS TRYING TO EXPAND MY SKILLSET AND DEEPEN MY UNDERSTANDING OF THE FIELD.<br><br>
+						BUT EVERY NOW AND THEN I LIKE TO COOK, BAKE AND GO TO THE GYM.<br><br>
 						
-						Thanks for coming by.<br>
-						-Adam
+						FEEL FREE TO REACH OUT ON LINKEDIN!<br><br>	
+						THANKS FOR STOPPING BY.<br>
 					</p>
 				</div>
 			</section>
@@ -70,6 +72,8 @@ const aboutMeBackground = "black";
 
 	.content {
 		grid-column: 2 / 4;
+		font-size: large;
+		line-height: 1.7;
 	}
 
 	.content :global(a) {

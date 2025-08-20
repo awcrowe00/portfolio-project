@@ -4,9 +4,9 @@ import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	{ label: 'HOME', href: '/' },
+	{ label: 'WORK', href: '/work/' },
+	{ label: 'ABOUT', href: '/about/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -17,10 +17,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav style="position:absolute;">
 	<div class="menu-header">
-		<a href="/" class="site-title">
-			<Icon icon="lightning" color="var(--accent-regular)" size="1.6em" gradient />
-			 
-		</a>
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -214,7 +210,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
+		background-color: black;
 		border-bottom: 1px solid var(--gray-800);
 	}
 
@@ -295,7 +291,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			border-radius: 999rem;
 			border: 0;
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+			background: black;
 			box-shadow: var(--shadow-md);
 		}
 
@@ -303,8 +299,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--gradient-stroke);
+			background: black;
 			border-radius: 999rem;
+			border: 1px solid white;
 			z-index: -1;
 		}
 

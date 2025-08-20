@@ -31,13 +31,20 @@ const { variant } = Astro.props;
 
 	@media (min-width: 50em) {
 		.grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;         /* Only one column */
+			justify-content: center;            /* Center the column in the container */
 			gap: 4rem;
+		}
+		.grid > :global(*) {
+			width: 900px;                      /* Set width for the square */
+			aspect-ratio: 1 / 1;               /* Make it a square */
+			margin: 0 auto;                    /* Center the item horizontally */
 		}
 
 		.grid.offset {
 			--row-offset: 7.5rem;
 			padding-bottom: var(--row-offset);
+			justify-content: center;
 		}
 
 		/* Shift first item in each row vertically to create staggered effect. */
@@ -46,10 +53,10 @@ const { variant } = Astro.props;
 		}
 
 		/* If last row contains only one item, display it in the second column. */
-		.grid.offset > :global(:last-child:nth-child(odd)) {
+		/* .grid.offset > :global(:last-child:nth-child(odd)) {
 			grid-column: 2 / 3;
 			transform: none;
-		}
+		} */
 
 		.grid.small {
 			display: flex;

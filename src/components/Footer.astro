@@ -1,27 +1,27 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <footer>
-	<div class="group">
-		<p>
-			made with <a href="https://astro.build/">astro</a>, <a href="https://svelte.dev/">svelte</a> and <a href="https://threejs.org/">three.js</a>
-		</p>
+	<div class="socials">
+		<a href="https://www.linkedin.com/in/adamwarrencrowe/" target="_blank" rel="noopener noreferrer">
+			<Icon icon="linkedin-logo" color="var(--accent-regular)" size="1.6em" gradient />
+		</a>
+		<a href="https://github.com/awcrowe00" target="_blank" rel="noopener noreferrer">
+
+			<Icon icon="github-logo" color="var(--accent-regular)" size="1.6em" gradient />
+		</a>
+	</div>
 </footer>
 <style>
 	footer {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
-		margin-top: auto;
-		padding: 3rem 2rem 3rem;
-		text-align: center;
 		color: var(--gray-400);
 		font-size: var(--text-sm);
 		position: absolute;
 		top: 85vh;
-		right: 1vh;
-		justify-content: flex-end;
-
+		right: 4%
 	}
 
 	footer a {
@@ -44,13 +44,12 @@
 		display: flex;
 		justify-content: center;
 		gap: 1rem;
-		flex-wrap: wrap;
 	}
 
 	@media (min-width: 50em) {
 		footer {
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
 			padding: 2.5rem;
 		}
 
@@ -62,7 +61,7 @@
 		}
 
 		.socials {
-			justify-content: flex-end;
+			justify-content: center;
 		}
 	}
 </style>
