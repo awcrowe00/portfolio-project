@@ -13,6 +13,21 @@ const textLinks: { label: string; href: string }[] = [
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
 
 ];
+
+// Fixed active link detection function
+const isActiveLink = (linkHref: string, currentPath: string) => {
+	// Exact match for home page
+	if (linkHref === '/portfolio-project/' && currentPath === '/portfolio-project/') {
+		return true;
+	}
+	
+	// For other pages, check if current path starts with link href, but not for home
+	if (linkHref !== '/portfolio-project/' && currentPath.startsWith(linkHref)) {
+		return true;
+	}
+	
+	return false;
+};
 ---
 
 <nav style="position:absolute;">
@@ -32,13 +47,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				textLinks.map(({ label, href }) => (
 					<li>
 						<a
-							aria-current={Astro.url.pathname === href}
+							aria-current={isActiveLink(href, Astro.url.pathname)}
 							class:list={[
 								'link',
 								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+									active: isActiveLink(href, Astro.url.pathname),
 								},
 							]}
 							href={href}
@@ -70,13 +83,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				textLinks.map(({ label, href }) => (
 					<li>
 						<a
-							aria-current={Astro.url.pathname === href}
+							aria-current={isActiveLink(href, Astro.url.pathname)}
 							class:list={[
 								'link',
 								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+									active: isActiveLink(href, Astro.url.pathname),
 								},
 							]}
 							href={href}
